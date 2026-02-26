@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace TempConvert
 {
@@ -12,14 +13,16 @@ namespace TempConvert
            // presents the result with 2 decimal houses; The output should print the received value
            // and the converted values: Examples( -40.00F = -40.00C)
            // Formula: F = C x 1.8 + 32 e C = (F - 32)/1.8
-           // 
            // Additionally, the program presents the absolute value in converted temperature. If the unity inputted
            // is not "C" or "F", the program prints "Invalid unity."
 
-            Console.WriteLine("Temperature:");
-            double temp = Convert.ToDouble(Console.ReadLine());
+           // Input needs to be side to side of the Print (Examples: "Temperature: 40")
+           // It should accept numbers with point (37.5)
 
-            Console.WriteLine("Unity (C/F):");
+            Console.Write("Temperature: ");
+            double temp = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write("Unity (C/F): ");
             string unity = Console.ReadLine().ToUpper();
 
             switch (unity)
@@ -35,7 +38,7 @@ namespace TempConvert
                     Console.WriteLine($"Absolute value: {Math.Abs(celsius):F2}C");
                     break;
                 default:
-                    Console.WriteLine("Invalid unity.");
+                    Console.WriteLine("Invalid unit.");
                     break;
                     
             }
