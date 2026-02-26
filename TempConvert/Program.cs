@@ -34,6 +34,10 @@ namespace TempConvert
                     Console.WriteLine($"{temp:F2}F = {celsius:F2}C");
                     Console.WriteLine($"Absolute value: {Math.Abs(celsius):F2}C");
                     break;
+                default:
+                    Console.WriteLine("Invalid unity.");
+                    break;
+                    
             }
 
         }
