@@ -30,12 +30,12 @@ namespace TempConvert
                 case "C":
                     double fahrenheit = temp * 1.8 + 32;
                     Console.WriteLine($"{temp:F2} C = {fahrenheit:F2} F");
-                    Console.WriteLine($"Absolute value: {Math.Abs(fahrenheit):F2}F");
+                    Console.WriteLine($"Absolute value: {Math.Abs(fahrenheit):F2}");
                     break;
                 case "F":
                     double celsius = (temp - 32) / 1.8;
                     Console.WriteLine($"{temp:F2}F = {celsius:F2}C");
-                    Console.WriteLine($"Absolute value: {Math.Abs(celsius):F2}C");
+                    Console.WriteLine($"Absolute value: {Math.Abs(celsius):F2}");
                     break;
                 default:
                     Console.WriteLine("Invalid unit.");
